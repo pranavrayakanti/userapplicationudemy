@@ -5,17 +5,21 @@ import java.util.Date;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+
+@ApiModel(description="details of user")
 public class User {
 	
 	private Integer id;
 	@Size(min=2,message="atlest 2 letters")
+	@ApiModelProperty(notes="name atleast 2 char")//for swagger doc
 	private String name;
-	
-	@Past(message="date should be past")
+		@Past(message="date should be past")//validation
+	@ApiModelProperty(notes="birthday should be past")//for swagger doc
 	private Date dob;
-	
-	
-	//add default constructor for json response--post	
+    //add default constructor for json response--post	
 	public User(){
 		
 	}
