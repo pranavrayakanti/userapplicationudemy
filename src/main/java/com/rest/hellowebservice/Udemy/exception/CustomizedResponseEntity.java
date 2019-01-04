@@ -33,7 +33,7 @@ public class CustomizedResponseEntity extends ResponseEntityExceptionHandler{
     
    return new ResponseEntity(exceptionResponse,HttpStatus.NOT_FOUND);
 	}
-	
+	//overrise frome model
     @Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(
 			MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
