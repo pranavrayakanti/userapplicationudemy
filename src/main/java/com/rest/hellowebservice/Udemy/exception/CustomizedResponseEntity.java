@@ -22,7 +22,7 @@ public class CustomizedResponseEntity extends ResponseEntityExceptionHandler{
 	public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) {
 		
     ExceptionResponseFormat exceptionResponse=new ExceptionResponseFormat(new Date(),ex.getMessage(),request.getDescription(false));
-    
+    //sample  added
    return new ResponseEntity(exceptionResponse,HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
